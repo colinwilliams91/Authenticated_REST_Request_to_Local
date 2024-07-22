@@ -29,9 +29,16 @@ partial class ARRL
     private void InitializeComponent()
     {
         tableLayoutPanel1 = new TableLayoutPanel();
+        tableLayoutPanel10 = new TableLayoutPanel();
+        textBox9 = new TextBox();
+        tableLayoutPanel7 = new TableLayoutPanel();
+        textBox6 = new TextBox();
+        label_URL = new Label();
         ARRL_ASCII = new Label();
         tableLayoutPanel2 = new TableLayoutPanel();
         textBox1 = new TextBox();
+        label_Token = new Label();
+        checkBox1 = new CheckBox();
         textBox2 = new TextBox();
         tableLayoutPanel3 = new TableLayoutPanel();
         textBox3 = new TextBox();
@@ -44,14 +51,11 @@ partial class ARRL
         tableLayoutPanel8 = new TableLayoutPanel();
         textBox8 = new TextBox();
         tableLayoutPanel9 = new TableLayoutPanel();
-        tableLayoutPanel7 = new TableLayoutPanel();
-        textBox6 = new TextBox();
-        tableLayoutPanel10 = new TableLayoutPanel();
-        textBox9 = new TextBox();
+        label_Out_File = new Label();
         tableLayoutPanel1.SuspendLayout();
-        tableLayoutPanel2.SuspendLayout();
-        tableLayoutPanel7.SuspendLayout();
         tableLayoutPanel10.SuspendLayout();
+        tableLayoutPanel7.SuspendLayout();
+        tableLayoutPanel2.SuspendLayout();
         SuspendLayout();
         // 
         // tableLayoutPanel1
@@ -75,6 +79,79 @@ partial class ARRL
         tableLayoutPanel1.Size = new Size(962, 383);
         tableLayoutPanel1.TabIndex = 0;
         // 
+        // tableLayoutPanel10
+        // 
+        tableLayoutPanel10.ColumnCount = 4;
+        tableLayoutPanel10.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+        tableLayoutPanel10.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+        tableLayoutPanel10.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+        tableLayoutPanel10.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+        tableLayoutPanel10.Controls.Add(textBox9, 1, 1);
+        tableLayoutPanel10.Controls.Add(label_Out_File, 0, 0);
+        tableLayoutPanel10.Dock = DockStyle.Fill;
+        tableLayoutPanel10.Location = new Point(3, 247);
+        tableLayoutPanel10.Name = "tableLayoutPanel10";
+        tableLayoutPanel10.RowCount = 2;
+        tableLayoutPanel10.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+        tableLayoutPanel10.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+        tableLayoutPanel10.Size = new Size(956, 59);
+        tableLayoutPanel10.TabIndex = 6;
+        // 
+        // textBox9
+        // 
+        textBox9.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+        textBox9.BackColor = SystemColors.WindowFrame;
+        tableLayoutPanel10.SetColumnSpan(textBox9, 3);
+        textBox9.ForeColor = SystemColors.MenuHighlight;
+        textBox9.Location = new Point(242, 33);
+        textBox9.Margin = new Padding(3, 3, 25, 3);
+        textBox9.Name = "textBox9";
+        textBox9.Size = new Size(689, 23);
+        textBox9.TabIndex = 0;
+        // 
+        // tableLayoutPanel7
+        // 
+        tableLayoutPanel7.ColumnCount = 4;
+        tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+        tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+        tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+        tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+        tableLayoutPanel7.Controls.Add(textBox6, 1, 1);
+        tableLayoutPanel7.Controls.Add(label_URL, 0, 0);
+        tableLayoutPanel7.Dock = DockStyle.Fill;
+        tableLayoutPanel7.Location = new Point(3, 117);
+        tableLayoutPanel7.Name = "tableLayoutPanel7";
+        tableLayoutPanel7.RowCount = 2;
+        tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+        tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+        tableLayoutPanel7.Size = new Size(956, 59);
+        tableLayoutPanel7.TabIndex = 5;
+        // 
+        // textBox6
+        // 
+        textBox6.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+        textBox6.BackColor = SystemColors.WindowFrame;
+        tableLayoutPanel7.SetColumnSpan(textBox6, 3);
+        textBox6.Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        textBox6.ForeColor = SystemColors.MenuHighlight;
+        textBox6.Location = new Point(242, 33);
+        textBox6.Margin = new Padding(3, 3, 25, 3);
+        textBox6.Name = "textBox6";
+        textBox6.Size = new Size(689, 23);
+        textBox6.TabIndex = 0;
+        // 
+        // label_URL
+        // 
+        label_URL.AutoSize = true;
+        tableLayoutPanel7.SetColumnSpan(label_URL, 4);
+        label_URL.Dock = DockStyle.Fill;
+        label_URL.Location = new Point(3, 0);
+        label_URL.Name = "label_URL";
+        label_URL.Padding = new Padding(0, 3, 0, 0);
+        label_URL.Size = new Size(950, 29);
+        label_URL.TabIndex = 1;
+        label_URL.Text = "> Please provide the http(s) target URL endpoint...";
+        // 
         // ARRL_ASCII
         // 
         ARRL_ASCII.AutoSize = true;
@@ -93,6 +170,8 @@ partial class ARRL
         tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
         tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
         tableLayoutPanel2.Controls.Add(textBox1, 1, 1);
+        tableLayoutPanel2.Controls.Add(label_Token, 0, 0);
+        tableLayoutPanel2.Controls.Add(checkBox1, 0, 1);
         tableLayoutPanel2.Dock = DockStyle.Fill;
         tableLayoutPanel2.Location = new Point(3, 182);
         tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -106,7 +185,6 @@ partial class ARRL
         // 
         textBox1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
         textBox1.BackColor = SystemColors.WindowFrame;
-        textBox1.BorderStyle = BorderStyle.FixedSingle;
         tableLayoutPanel2.SetColumnSpan(textBox1, 3);
         textBox1.ForeColor = SystemColors.MenuHighlight;
         textBox1.Location = new Point(242, 33);
@@ -114,6 +192,31 @@ partial class ARRL
         textBox1.Name = "textBox1";
         textBox1.Size = new Size(689, 23);
         textBox1.TabIndex = 0;
+        // 
+        // label_Token
+        // 
+        label_Token.AutoSize = true;
+        tableLayoutPanel2.SetColumnSpan(label_Token, 4);
+        label_Token.Dock = DockStyle.Fill;
+        label_Token.Location = new Point(3, 0);
+        label_Token.Name = "label_Token";
+        label_Token.Padding = new Padding(0, 3, 0, 0);
+        label_Token.Size = new Size(950, 29);
+        label_Token.TabIndex = 1;
+        label_Token.Text = "> (optional) If you need to provide an Authorization Bearer Token select checkbox and provide string below...";
+        // 
+        // checkBox1
+        // 
+        checkBox1.AutoSize = true;
+        checkBox1.Dock = DockStyle.Left;
+        checkBox1.Location = new Point(3, 32);
+        checkBox1.Name = "checkBox1";
+        checkBox1.Padding = new Padding(0, 3, 0, 0);
+        checkBox1.RightToLeft = RightToLeft.Yes;
+        checkBox1.Size = new Size(166, 24);
+        checkBox1.TabIndex = 2;
+        checkBox1.Text = "Require Auth Token <";
+        checkBox1.UseVisualStyleBackColor = true;
         // 
         // textBox2
         // 
@@ -283,65 +386,17 @@ partial class ARRL
         tableLayoutPanel9.Size = new Size(200, 100);
         tableLayoutPanel9.TabIndex = 0;
         // 
-        // tableLayoutPanel7
+        // label_Out_File
         // 
-        tableLayoutPanel7.ColumnCount = 4;
-        tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-        tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-        tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-        tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-        tableLayoutPanel7.Controls.Add(textBox6, 1, 1);
-        tableLayoutPanel7.Dock = DockStyle.Fill;
-        tableLayoutPanel7.Location = new Point(3, 117);
-        tableLayoutPanel7.Name = "tableLayoutPanel7";
-        tableLayoutPanel7.RowCount = 2;
-        tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-        tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-        tableLayoutPanel7.Size = new Size(956, 59);
-        tableLayoutPanel7.TabIndex = 5;
-        // 
-        // textBox6
-        // 
-        textBox6.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-        textBox6.BackColor = SystemColors.WindowFrame;
-        textBox6.BorderStyle = BorderStyle.FixedSingle;
-        tableLayoutPanel7.SetColumnSpan(textBox6, 3);
-        textBox6.ForeColor = SystemColors.MenuHighlight;
-        textBox6.Location = new Point(242, 33);
-        textBox6.Margin = new Padding(3, 3, 25, 3);
-        textBox6.Name = "textBox6";
-        textBox6.Size = new Size(689, 23);
-        textBox6.TabIndex = 0;
-        // 
-        // tableLayoutPanel10
-        // 
-        tableLayoutPanel10.ColumnCount = 4;
-        tableLayoutPanel10.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-        tableLayoutPanel10.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-        tableLayoutPanel10.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-        tableLayoutPanel10.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-        tableLayoutPanel10.Controls.Add(textBox9, 1, 1);
-        tableLayoutPanel10.Dock = DockStyle.Fill;
-        tableLayoutPanel10.Location = new Point(3, 247);
-        tableLayoutPanel10.Name = "tableLayoutPanel10";
-        tableLayoutPanel10.RowCount = 2;
-        tableLayoutPanel10.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-        tableLayoutPanel10.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-        tableLayoutPanel10.Size = new Size(956, 59);
-        tableLayoutPanel10.TabIndex = 6;
-        // 
-        // textBox9
-        // 
-        textBox9.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-        textBox9.BackColor = SystemColors.WindowFrame;
-        textBox9.BorderStyle = BorderStyle.FixedSingle;
-        tableLayoutPanel10.SetColumnSpan(textBox9, 3);
-        textBox9.ForeColor = SystemColors.MenuHighlight;
-        textBox9.Location = new Point(242, 33);
-        textBox9.Margin = new Padding(3, 3, 25, 3);
-        textBox9.Name = "textBox9";
-        textBox9.Size = new Size(689, 23);
-        textBox9.TabIndex = 0;
+        label_Out_File.AutoSize = true;
+        tableLayoutPanel10.SetColumnSpan(label_Out_File, 4);
+        label_Out_File.Dock = DockStyle.Fill;
+        label_Out_File.Location = new Point(3, 0);
+        label_Out_File.Name = "label_Out_File";
+        label_Out_File.Padding = new Padding(0, 3, 0, 0);
+        label_Out_File.Size = new Size(950, 29);
+        label_Out_File.TabIndex = 1;
+        label_Out_File.Text = "> Please provide the full file path, including file extension, where you would like to write the response...";
         // 
         // ARRL
         // 
@@ -357,12 +412,12 @@ partial class ARRL
         Text = "ARRL";
         tableLayoutPanel1.ResumeLayout(false);
         tableLayoutPanel1.PerformLayout();
-        tableLayoutPanel2.ResumeLayout(false);
-        tableLayoutPanel2.PerformLayout();
-        tableLayoutPanel7.ResumeLayout(false);
-        tableLayoutPanel7.PerformLayout();
         tableLayoutPanel10.ResumeLayout(false);
         tableLayoutPanel10.PerformLayout();
+        tableLayoutPanel7.ResumeLayout(false);
+        tableLayoutPanel7.PerformLayout();
+        tableLayoutPanel2.ResumeLayout(false);
+        tableLayoutPanel2.PerformLayout();
         ResumeLayout(false);
     }
 
@@ -388,4 +443,8 @@ partial class ARRL
     private TextBox textBox9;
     private TableLayoutPanel tableLayoutPanel7;
     private TextBox textBox6;
+    private Label label_URL;
+    private Label label_Token;
+    private CheckBox checkBox1;
+    private Label label_Out_File;
 }
