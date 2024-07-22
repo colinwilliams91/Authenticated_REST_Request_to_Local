@@ -53,6 +53,7 @@ partial class ARRL
         tableLayoutPanel8 = new TableLayoutPanel();
         textBox8 = new TextBox();
         tableLayoutPanel9 = new TableLayoutPanel();
+        flowLayoutPanel1 = new FlowLayoutPanel();
         tableLayoutPanel1.SuspendLayout();
         tableLayoutPanel10.SuspendLayout();
         tableLayoutPanel7.SuspendLayout();
@@ -67,6 +68,7 @@ partial class ARRL
         tableLayoutPanel1.Controls.Add(tableLayoutPanel7, 0, 1);
         tableLayoutPanel1.Controls.Add(ARRL_ASCII, 0, 0);
         tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 2);
+        tableLayoutPanel1.Controls.Add(flowLayoutPanel1, 0, 4);
         tableLayoutPanel1.Dock = DockStyle.Fill;
         tableLayoutPanel1.Location = new Point(0, 0);
         tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -412,6 +414,14 @@ partial class ARRL
         tableLayoutPanel9.Size = new Size(200, 100);
         tableLayoutPanel9.TabIndex = 0;
         // 
+        // flowLayoutPanel1
+        // 
+        flowLayoutPanel1.Dock = DockStyle.Fill;
+        flowLayoutPanel1.Location = new Point(3, 312);
+        flowLayoutPanel1.Name = "flowLayoutPanel1";
+        flowLayoutPanel1.Size = new Size(956, 68);
+        flowLayoutPanel1.TabIndex = 7;
+        // 
         // ARRL
         // 
         AutoScaleDimensions = new SizeF(7F, 16F);
@@ -462,4 +472,5 @@ partial class ARRL
     private CheckBox checkBox1;
     private Label label_Out_File;
     private Label label_Out_File_CWD;
+    private FlowLayoutPanel flowLayoutPanel1;
 }
