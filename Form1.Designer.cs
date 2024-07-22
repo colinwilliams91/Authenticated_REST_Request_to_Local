@@ -31,6 +31,8 @@ partial class ARRL
         tableLayoutPanel1 = new TableLayoutPanel();
         tableLayoutPanel10 = new TableLayoutPanel();
         textBox9 = new TextBox();
+        label_Out_File = new Label();
+        label_Out_File_CWD = new Label();
         tableLayoutPanel7 = new TableLayoutPanel();
         textBox6 = new TextBox();
         label_URL = new Label();
@@ -51,7 +53,6 @@ partial class ARRL
         tableLayoutPanel8 = new TableLayoutPanel();
         textBox8 = new TextBox();
         tableLayoutPanel9 = new TableLayoutPanel();
-        label_Out_File = new Label();
         tableLayoutPanel1.SuspendLayout();
         tableLayoutPanel10.SuspendLayout();
         tableLayoutPanel7.SuspendLayout();
@@ -88,6 +89,7 @@ partial class ARRL
         tableLayoutPanel10.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
         tableLayoutPanel10.Controls.Add(textBox9, 1, 1);
         tableLayoutPanel10.Controls.Add(label_Out_File, 0, 0);
+        tableLayoutPanel10.Controls.Add(label_Out_File_CWD, 0, 1);
         tableLayoutPanel10.Dock = DockStyle.Fill;
         tableLayoutPanel10.Location = new Point(3, 247);
         tableLayoutPanel10.Name = "tableLayoutPanel10";
@@ -108,6 +110,30 @@ partial class ARRL
         textBox9.Name = "textBox9";
         textBox9.Size = new Size(689, 23);
         textBox9.TabIndex = 0;
+        // 
+        // label_Out_File
+        // 
+        label_Out_File.AutoSize = true;
+        tableLayoutPanel10.SetColumnSpan(label_Out_File, 4);
+        label_Out_File.Dock = DockStyle.Fill;
+        label_Out_File.Location = new Point(3, 0);
+        label_Out_File.Name = "label_Out_File";
+        label_Out_File.Size = new Size(950, 29);
+        label_Out_File.TabIndex = 1;
+        label_Out_File.Text = "> Please provide the full file path, including file extension, where you would like to write the response...";
+        label_Out_File.TextAlign = ContentAlignment.MiddleLeft;
+        // 
+        // label_Out_File_CWD
+        // 
+        label_Out_File_CWD.AutoSize = true;
+        label_Out_File_CWD.Dock = DockStyle.Fill;
+        label_Out_File_CWD.Location = new Point(3, 29);
+        label_Out_File_CWD.Name = "label_Out_File_CWD";
+        label_Out_File_CWD.Padding = new Padding(0, 3, 0, 0);
+        label_Out_File_CWD.Size = new Size(233, 30);
+        label_Out_File_CWD.TabIndex = 2;
+        label_Out_File_CWD.Text = "> (defaults to CWD)";
+        label_Out_File_CWD.TextAlign = ContentAlignment.MiddleLeft;
         // 
         // tableLayoutPanel7
         // 
@@ -147,10 +173,10 @@ partial class ARRL
         label_URL.Dock = DockStyle.Fill;
         label_URL.Location = new Point(3, 0);
         label_URL.Name = "label_URL";
-        label_URL.Padding = new Padding(0, 3, 0, 0);
         label_URL.Size = new Size(950, 29);
         label_URL.TabIndex = 1;
         label_URL.Text = "> Please provide the http(s) target URL endpoint...";
+        label_URL.TextAlign = ContentAlignment.MiddleLeft;
         // 
         // ARRL_ASCII
         // 
@@ -200,10 +226,10 @@ partial class ARRL
         label_Token.Dock = DockStyle.Fill;
         label_Token.Location = new Point(3, 0);
         label_Token.Name = "label_Token";
-        label_Token.Padding = new Padding(0, 3, 0, 0);
         label_Token.Size = new Size(950, 29);
         label_Token.TabIndex = 1;
         label_Token.Text = "> (optional) If you need to provide an Authorization Bearer Token select checkbox and provide string below...";
+        label_Token.TextAlign = ContentAlignment.MiddleLeft;
         // 
         // checkBox1
         // 
@@ -386,18 +412,6 @@ partial class ARRL
         tableLayoutPanel9.Size = new Size(200, 100);
         tableLayoutPanel9.TabIndex = 0;
         // 
-        // label_Out_File
-        // 
-        label_Out_File.AutoSize = true;
-        tableLayoutPanel10.SetColumnSpan(label_Out_File, 4);
-        label_Out_File.Dock = DockStyle.Fill;
-        label_Out_File.Location = new Point(3, 0);
-        label_Out_File.Name = "label_Out_File";
-        label_Out_File.Padding = new Padding(0, 3, 0, 0);
-        label_Out_File.Size = new Size(950, 29);
-        label_Out_File.TabIndex = 1;
-        label_Out_File.Text = "> Please provide the full file path, including file extension, where you would like to write the response...";
-        // 
         // ARRL
         // 
         AutoScaleDimensions = new SizeF(7F, 16F);
@@ -447,4 +461,5 @@ partial class ARRL
     private Label label_Token;
     private CheckBox checkBox1;
     private Label label_Out_File;
+    private Label label_Out_File_CWD;
 }
