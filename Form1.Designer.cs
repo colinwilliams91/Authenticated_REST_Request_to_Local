@@ -1,6 +1,6 @@
 ﻿namespace Invoke_Auth_Rest_Write;
 
-partial class Form1
+partial class Invoke_Auth_Rest_Write
 {
     /// <summary>
     ///  Required designer variable.
@@ -28,10 +28,20 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
-        this.components = new System.ComponentModel.Container();
-        this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        this.ClientSize = new System.Drawing.Size(800, 450);
-        this.Text = "Form1";
+        SuspendLayout();
+        // 
+        // Invoke_Auth_Rest_Write
+        // 
+        AutoScaleDimensions = new SizeF(7F, 16F);
+        AutoScaleMode = AutoScaleMode.Font;
+        BackColor = SystemColors.ControlText;
+        ClientSize = new Size(962, 383);
+        Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        ForeColor = SystemColors.ActiveCaption;
+        Name = "Invoke_Auth_Rest_Write";
+        Opacity = 0.8D;
+        Text = "Invoke_Auth_Rest_Write";
+        ResumeLayout(false);
     }
 
     #endregion
