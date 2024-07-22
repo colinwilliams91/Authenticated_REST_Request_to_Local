@@ -1,8 +1,8 @@
 namespace Invoke_Auth_Rest_Write;
 
-public partial class Form1 : Form
+public partial class Invoke_Auth_Rest_Write : Form
 {
-    public Form1()
+    public Invoke_Auth_Rest_Write()
     {
         InitializeComponent();
     }
