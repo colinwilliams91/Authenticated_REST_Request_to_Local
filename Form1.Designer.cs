@@ -41,6 +41,8 @@ partial class ARRL
         textBox1 = new TextBox();
         label_Token = new Label();
         checkBox1 = new CheckBox();
+        flowLayoutPanel1 = new FlowLayoutPanel();
+        button_Send_Req = new Button();
         textBox2 = new TextBox();
         tableLayoutPanel3 = new TableLayoutPanel();
         textBox3 = new TextBox();
@@ -53,11 +55,11 @@ partial class ARRL
         tableLayoutPanel8 = new TableLayoutPanel();
         textBox8 = new TextBox();
         tableLayoutPanel9 = new TableLayoutPanel();
-        flowLayoutPanel1 = new FlowLayoutPanel();
         tableLayoutPanel1.SuspendLayout();
         tableLayoutPanel10.SuspendLayout();
         tableLayoutPanel7.SuspendLayout();
         tableLayoutPanel2.SuspendLayout();
+        flowLayoutPanel1.SuspendLayout();
         SuspendLayout();
         // 
         // tableLayoutPanel1
@@ -246,6 +248,29 @@ partial class ARRL
         checkBox1.Text = "Require Auth Token <";
         checkBox1.UseVisualStyleBackColor = true;
         // 
+        // flowLayoutPanel1
+        // 
+        flowLayoutPanel1.Controls.Add(button_Send_Req);
+        flowLayoutPanel1.Dock = DockStyle.Fill;
+        flowLayoutPanel1.FlowDirection = FlowDirection.RightToLeft;
+        flowLayoutPanel1.Location = new Point(3, 312);
+        flowLayoutPanel1.Name = "flowLayoutPanel1";
+        flowLayoutPanel1.Size = new Size(956, 68);
+        flowLayoutPanel1.TabIndex = 7;
+        // 
+        // button_Send_Req
+        // 
+        button_Send_Req.AutoSize = true;
+        button_Send_Req.FlatAppearance.MouseDownBackColor = Color.MidnightBlue;
+        button_Send_Req.FlatAppearance.MouseOverBackColor = SystemColors.ControlDarkDark;
+        button_Send_Req.FlatStyle = FlatStyle.Flat;
+        button_Send_Req.Location = new Point(850, 3);
+        button_Send_Req.Name = "button_Send_Req";
+        button_Send_Req.Size = new Size(103, 28);
+        button_Send_Req.TabIndex = 0;
+        button_Send_Req.Text = "Send Request";
+        button_Send_Req.UseVisualStyleBackColor = true;
+        // 
         // textBox2
         // 
         textBox2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
@@ -414,14 +439,6 @@ partial class ARRL
         tableLayoutPanel9.Size = new Size(200, 100);
         tableLayoutPanel9.TabIndex = 0;
         // 
-        // flowLayoutPanel1
-        // 
-        flowLayoutPanel1.Dock = DockStyle.Fill;
-        flowLayoutPanel1.Location = new Point(3, 312);
-        flowLayoutPanel1.Name = "flowLayoutPanel1";
-        flowLayoutPanel1.Size = new Size(956, 68);
-        flowLayoutPanel1.TabIndex = 7;
-        // 
         // ARRL
         // 
         AutoScaleDimensions = new SizeF(7F, 16F);
@@ -442,6 +459,8 @@ partial class ARRL
         tableLayoutPanel7.PerformLayout();
         tableLayoutPanel2.ResumeLayout(false);
         tableLayoutPanel2.PerformLayout();
+        flowLayoutPanel1.ResumeLayout(false);
+        flowLayoutPanel1.PerformLayout();
         ResumeLayout(false);
     }
 
@@ -473,4 +492,5 @@ partial class ARRL
     private Label label_Out_File;
     private Label label_Out_File_CWD;
     private FlowLayoutPanel flowLayoutPanel1;
+    private Button button_Send_Req;
 }
