@@ -8,5 +8,5 @@
   - Path to Out File (encoding to specified file type) 
 
 ### Proof of Concept
-![image](https://github.com/user-attachments/assets/445c94d9-f522-4272-a2a9-95b28e5d1347)
+![image](https://github.com/user-attachments/assets/7c90d6ef-29e9-4ff2-82ef-660924aedcc2)
 `wip`
