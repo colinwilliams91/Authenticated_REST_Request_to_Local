@@ -40,7 +40,7 @@ partial class ARRL
         tableLayoutPanel2 = new TableLayoutPanel();
         textBoxAuthToken = new TextBox();
         label_Token = new Label();
-        checkBox1 = new CheckBox();
+        checkBoxAuthToken = new CheckBox();
         tableLayoutPanel11 = new TableLayoutPanel();
         button_Select_File = new Button();
         button_Send_Req = new Button();
@@ -205,7 +205,7 @@ partial class ARRL
         tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
         tableLayoutPanel2.Controls.Add(textBoxAuthToken, 1, 1);
         tableLayoutPanel2.Controls.Add(label_Token, 0, 0);
-        tableLayoutPanel2.Controls.Add(checkBox1, 0, 1);
+        tableLayoutPanel2.Controls.Add(checkBoxAuthToken, 0, 1);
         tableLayoutPanel2.Dock = DockStyle.Fill;
         tableLayoutPanel2.Location = new Point(3, 184);
         tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -221,6 +221,7 @@ partial class ARRL
         textBoxAuthToken.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
         textBoxAuthToken.BackColor = SystemColors.WindowFrame;
         tableLayoutPanel2.SetColumnSpan(textBoxAuthToken, 3);
+        textBoxAuthToken.Enabled = false;
         textBoxAuthToken.ForeColor = SystemColors.MenuHighlight;
         textBoxAuthToken.Location = new Point(242, 40);
         textBoxAuthToken.Margin = new Padding(3, 3, 25, 3);
@@ -240,18 +241,19 @@ partial class ARRL
         label_Token.Text = "> (optional) If you need to provide an Authorization Bearer Token select checkbox and provide string below...";
         label_Token.TextAlign = ContentAlignment.MiddleLeft;
         // 
-        // checkBox1
+        // checkBoxAuthToken
         // 
-        checkBox1.AutoSize = true;
-        checkBox1.Dock = DockStyle.Left;
-        checkBox1.Location = new Point(3, 36);
-        checkBox1.Name = "checkBox1";
-        checkBox1.Padding = new Padding(0, 3, 0, 0);
-        checkBox1.RightToLeft = RightToLeft.Yes;
-        checkBox1.Size = new Size(166, 27);
-        checkBox1.TabIndex = 2;
-        checkBox1.Text = "Require Auth Token <";
-        checkBox1.UseVisualStyleBackColor = true;
+        checkBoxAuthToken.AutoSize = true;
+        checkBoxAuthToken.Dock = DockStyle.Left;
+        checkBoxAuthToken.Location = new Point(3, 36);
+        checkBoxAuthToken.Name = "checkBoxAuthToken";
+        checkBoxAuthToken.Padding = new Padding(0, 3, 0, 0);
+        checkBoxAuthToken.RightToLeft = RightToLeft.Yes;
+        checkBoxAuthToken.Size = new Size(166, 27);
+        checkBoxAuthToken.TabIndex = 2;
+        checkBoxAuthToken.Text = "Require Auth Token <";
+        checkBoxAuthToken.UseVisualStyleBackColor = true;
+        checkBoxAuthToken.CheckedChanged += CheckBoxAuthToken_CheckedChanged;
         // 
         // tableLayoutPanel11
         // 
@@ -525,7 +527,7 @@ partial class ARRL
     private TextBox textBox6;
     private Label label_URL;
     private Label label_Token;
-    private CheckBox checkBox1;
+    private CheckBox checkBoxAuthToken;
     private Label label_Out_File;
     private TableLayoutPanel tableLayoutPanel11;
     private Button button_Send_Req;

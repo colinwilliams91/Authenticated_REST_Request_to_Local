@@ -26,4 +26,10 @@ public partial class ARRL : Form
         button_Select_File.Enabled = isChecked;
     }
 
+    private void CheckBoxAuthToken_CheckedChanged(object sender, EventArgs e)
+    {
+        bool isChecked = checkBoxAuthToken.Checked;
+
+        textBoxAuthToken.Enabled = isChecked;
+    }
 }
