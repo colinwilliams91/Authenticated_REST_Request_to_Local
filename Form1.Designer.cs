@@ -38,7 +38,7 @@ partial class ARRL
         label_URL = new Label();
         ARRL_ASCII = new Label();
         tableLayoutPanel2 = new TableLayoutPanel();
-        textBox1 = new TextBox();
+        textBoxAuthToken = new TextBox();
         label_Token = new Label();
         checkBox1 = new CheckBox();
         tableLayoutPanel11 = new TableLayoutPanel();
@@ -120,6 +120,7 @@ partial class ARRL
         // 
         // textBoxOutFile
         // 
+        textBoxOutFile.AllowDrop = true;
         textBoxOutFile.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
         textBoxOutFile.BackColor = SystemColors.WindowFrame;
         tableLayoutPanel10.SetColumnSpan(textBoxOutFile, 3);
@@ -202,7 +203,7 @@ partial class ARRL
         tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
         tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
         tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-        tableLayoutPanel2.Controls.Add(textBox1, 1, 1);
+        tableLayoutPanel2.Controls.Add(textBoxAuthToken, 1, 1);
         tableLayoutPanel2.Controls.Add(label_Token, 0, 0);
         tableLayoutPanel2.Controls.Add(checkBox1, 0, 1);
         tableLayoutPanel2.Dock = DockStyle.Fill;
@@ -214,17 +215,18 @@ partial class ARRL
         tableLayoutPanel2.Size = new Size(956, 66);
         tableLayoutPanel2.TabIndex = 4;
         // 
-        // textBox1
+        // textBoxAuthToken
         // 
-        textBox1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-        textBox1.BackColor = SystemColors.WindowFrame;
-        tableLayoutPanel2.SetColumnSpan(textBox1, 3);
-        textBox1.ForeColor = SystemColors.MenuHighlight;
-        textBox1.Location = new Point(242, 40);
-        textBox1.Margin = new Padding(3, 3, 25, 3);
-        textBox1.Name = "textBox1";
-        textBox1.Size = new Size(689, 23);
-        textBox1.TabIndex = 0;
+        textBoxAuthToken.AllowDrop = true;
+        textBoxAuthToken.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+        textBoxAuthToken.BackColor = SystemColors.WindowFrame;
+        tableLayoutPanel2.SetColumnSpan(textBoxAuthToken, 3);
+        textBoxAuthToken.ForeColor = SystemColors.MenuHighlight;
+        textBoxAuthToken.Location = new Point(242, 40);
+        textBoxAuthToken.Margin = new Padding(3, 3, 25, 3);
+        textBoxAuthToken.Name = "textBoxAuthToken";
+        textBoxAuthToken.Size = new Size(689, 23);
+        textBoxAuthToken.TabIndex = 0;
         // 
         // label_Token
         // 
@@ -502,7 +504,7 @@ partial class ARRL
     #endregion
 
     private TableLayoutPanel tableLayoutPanel1;
-    private TextBox textBox1;
+    private TextBox textBoxAuthToken;
     private Label ARRL_ASCII;
     private TableLayoutPanel tableLayoutPanel2;
     private TextBox textBox2;

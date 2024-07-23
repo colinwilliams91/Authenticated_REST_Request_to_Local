@@ -25,4 +25,5 @@ public partial class ARRL : Form
         textBoxOutFile.Enabled = !isChecked;
         button_Select_File.Enabled = isChecked;
     }
+
 }
