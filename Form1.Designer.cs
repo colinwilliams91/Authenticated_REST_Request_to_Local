@@ -38,9 +38,10 @@ partial class ARRL
         label_URL = new Label();
         ARRL_ASCII = new Label();
         tableLayoutPanel2 = new TableLayoutPanel();
-        textBoxAuthToken = new TextBox();
+        button_Submit_Auth = new Button();
         label_Token = new Label();
         checkBoxAuthToken = new CheckBox();
+        textBoxAuthToken = new TextBox();
         tableLayoutPanel11 = new TableLayoutPanel();
         button_Select_File = new Button();
         button_Send_Req = new Button();
@@ -121,11 +122,11 @@ partial class ARRL
         // textBoxOutFile
         // 
         textBoxOutFile.AllowDrop = true;
-        textBoxOutFile.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+        textBoxOutFile.Anchor = AnchorStyles.Right;
         textBoxOutFile.BackColor = SystemColors.WindowFrame;
         tableLayoutPanel10.SetColumnSpan(textBoxOutFile, 3);
         textBoxOutFile.ForeColor = SystemColors.MenuHighlight;
-        textBoxOutFile.Location = new Point(242, 40);
+        textBoxOutFile.Location = new Point(242, 38);
         textBoxOutFile.Margin = new Padding(3, 3, 25, 3);
         textBoxOutFile.Name = "textBoxOutFile";
         textBoxOutFile.Size = new Size(689, 23);
@@ -163,12 +164,12 @@ partial class ARRL
         // 
         // textBox6
         // 
-        textBox6.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+        textBox6.Anchor = AnchorStyles.Right;
         textBox6.BackColor = SystemColors.WindowFrame;
         tableLayoutPanel7.SetColumnSpan(textBox6, 3);
         textBox6.Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
         textBox6.ForeColor = SystemColors.MenuHighlight;
-        textBox6.Location = new Point(242, 40);
+        textBox6.Location = new Point(242, 38);
         textBox6.Margin = new Padding(3, 3, 25, 3);
         textBox6.Name = "textBox6";
         textBox6.Size = new Size(689, 23);
@@ -199,35 +200,38 @@ partial class ARRL
         // tableLayoutPanel2
         // 
         tableLayoutPanel2.ColumnCount = 4;
-        tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-        tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-        tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-        tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-        tableLayoutPanel2.Controls.Add(textBoxAuthToken, 1, 1);
+        tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+        tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
+        tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
+        tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+        tableLayoutPanel2.Controls.Add(button_Submit_Auth, 3, 1);
         tableLayoutPanel2.Controls.Add(label_Token, 0, 0);
         tableLayoutPanel2.Controls.Add(checkBoxAuthToken, 0, 1);
+        tableLayoutPanel2.Controls.Add(textBoxAuthToken, 1, 1);
         tableLayoutPanel2.Dock = DockStyle.Fill;
         tableLayoutPanel2.Location = new Point(3, 184);
         tableLayoutPanel2.Name = "tableLayoutPanel2";
         tableLayoutPanel2.RowCount = 2;
         tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
         tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+        tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
         tableLayoutPanel2.Size = new Size(956, 66);
         tableLayoutPanel2.TabIndex = 4;
         // 
-        // textBoxAuthToken
+        // button_Submit_Auth
         // 
-        textBoxAuthToken.AllowDrop = true;
-        textBoxAuthToken.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-        textBoxAuthToken.BackColor = SystemColors.WindowFrame;
-        tableLayoutPanel2.SetColumnSpan(textBoxAuthToken, 3);
-        textBoxAuthToken.Enabled = false;
-        textBoxAuthToken.ForeColor = SystemColors.MenuHighlight;
-        textBoxAuthToken.Location = new Point(242, 40);
-        textBoxAuthToken.Margin = new Padding(3, 3, 25, 3);
-        textBoxAuthToken.Name = "textBoxAuthToken";
-        textBoxAuthToken.Size = new Size(689, 23);
-        textBoxAuthToken.TabIndex = 0;
+        button_Submit_Auth.AutoSize = true;
+        button_Submit_Auth.Dock = DockStyle.Bottom;
+        button_Submit_Auth.FlatAppearance.MouseDownBackColor = Color.MidnightBlue;
+        button_Submit_Auth.FlatAppearance.MouseOverBackColor = SystemColors.ControlDarkDark;
+        button_Submit_Auth.FlatStyle = FlatStyle.Flat;
+        button_Submit_Auth.Location = new Point(788, 36);
+        button_Submit_Auth.Margin = new Padding(25, 3, 25, 3);
+        button_Submit_Auth.Name = "button_Submit_Auth";
+        button_Submit_Auth.Size = new Size(143, 27);
+        button_Submit_Auth.TabIndex = 3;
+        button_Submit_Auth.Text = "Submit Auth Token";
+        button_Submit_Auth.UseVisualStyleBackColor = true;
         // 
         // label_Token
         // 
@@ -254,6 +258,19 @@ partial class ARRL
         checkBoxAuthToken.Text = "Require Auth Token <";
         checkBoxAuthToken.UseVisualStyleBackColor = true;
         checkBoxAuthToken.CheckedChanged += CheckBoxAuthToken_CheckedChanged;
+        // 
+        // textBoxAuthToken
+        // 
+        textBoxAuthToken.AllowDrop = true;
+        textBoxAuthToken.Anchor = AnchorStyles.None;
+        textBoxAuthToken.BackColor = SystemColors.WindowFrame;
+        tableLayoutPanel2.SetColumnSpan(textBoxAuthToken, 2);
+        textBoxAuthToken.Enabled = false;
+        textBoxAuthToken.ForeColor = SystemColors.MenuHighlight;
+        textBoxAuthToken.Location = new Point(196, 38);
+        textBoxAuthToken.Name = "textBoxAuthToken";
+        textBoxAuthToken.Size = new Size(562, 23);
+        textBoxAuthToken.TabIndex = 0;
         // 
         // tableLayoutPanel11
         // 
@@ -534,4 +551,5 @@ partial class ARRL
     private Button button_Select_File;
     private CheckBox checkBoxSelectOutFile;
     private OpenFileDialog fileDialogWrite;
+    private Button button_Submit_Auth;
 }
