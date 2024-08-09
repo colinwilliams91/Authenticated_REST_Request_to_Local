@@ -75,6 +75,7 @@ public partial class ARRL : Form
         {
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _AuthToken);
         }
+        // TODO: try catch for http request
         HttpResponseMessage response = await client.GetAsync(_URLEndpoint);
         string responseBody = await response.Content.ReadAsStringAsync();
         try
@@ -85,7 +86,6 @@ public partial class ARRL : Form
         {
             throw new Exception();
         }
-
     }
     #endregion
 }
