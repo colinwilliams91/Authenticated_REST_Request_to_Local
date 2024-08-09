@@ -2,6 +2,8 @@ namespace Invoke_Auth_Rest_Write;
 
 public partial class ARRL : Form
 {
+    private string? _AuthToken;
+
     public ARRL()
     {
         InitializeComponent();
