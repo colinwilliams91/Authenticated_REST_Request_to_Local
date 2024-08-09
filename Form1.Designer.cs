@@ -271,6 +271,7 @@ partial class ARRL
         textBoxAuthToken.Name = "textBoxAuthToken";
         textBoxAuthToken.Size = new Size(562, 23);
         textBoxAuthToken.TabIndex = 0;
+        textBoxAuthToken.TextChanged += textBoxAuthToken_TextChanged;
         // 
         // tableLayoutPanel11
         // 

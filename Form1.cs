@@ -34,4 +34,10 @@ public partial class ARRL : Form
 
         textBoxAuthToken.Enabled = isChecked;
     }
+
+    private void textBoxAuthToken_TextChanged(object sender, EventArgs e)
+    {
+        _AuthToken = textBoxAuthToken.Text;
+        textBox6.Text = _AuthToken;
+    }
 }
