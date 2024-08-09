@@ -38,7 +38,6 @@ partial class ARRL
         label_URL = new Label();
         ARRL_ASCII = new Label();
         tableLayoutPanel2 = new TableLayoutPanel();
-        button_Submit_Auth = new Button();
         label_Token = new Label();
         checkBoxAuthToken = new CheckBox();
         textBoxAuthToken = new TextBox();
@@ -200,11 +199,10 @@ partial class ARRL
         // tableLayoutPanel2
         // 
         tableLayoutPanel2.ColumnCount = 4;
-        tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-        tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
-        tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
-        tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-        tableLayoutPanel2.Controls.Add(button_Submit_Auth, 3, 1);
+        tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+        tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+        tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+        tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
         tableLayoutPanel2.Controls.Add(label_Token, 0, 0);
         tableLayoutPanel2.Controls.Add(checkBoxAuthToken, 0, 1);
         tableLayoutPanel2.Controls.Add(textBoxAuthToken, 1, 1);
@@ -214,24 +212,8 @@ partial class ARRL
         tableLayoutPanel2.RowCount = 2;
         tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
         tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-        tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
         tableLayoutPanel2.Size = new Size(956, 66);
         tableLayoutPanel2.TabIndex = 4;
-        // 
-        // button_Submit_Auth
-        // 
-        button_Submit_Auth.AutoSize = true;
-        button_Submit_Auth.Dock = DockStyle.Bottom;
-        button_Submit_Auth.FlatAppearance.MouseDownBackColor = Color.MidnightBlue;
-        button_Submit_Auth.FlatAppearance.MouseOverBackColor = SystemColors.ControlDarkDark;
-        button_Submit_Auth.FlatStyle = FlatStyle.Flat;
-        button_Submit_Auth.Location = new Point(788, 36);
-        button_Submit_Auth.Margin = new Padding(25, 3, 25, 3);
-        button_Submit_Auth.Name = "button_Submit_Auth";
-        button_Submit_Auth.Size = new Size(143, 27);
-        button_Submit_Auth.TabIndex = 3;
-        button_Submit_Auth.Text = "Submit Auth Token";
-        button_Submit_Auth.UseVisualStyleBackColor = true;
         // 
         // label_Token
         // 
@@ -264,12 +246,13 @@ partial class ARRL
         textBoxAuthToken.AllowDrop = true;
         textBoxAuthToken.Anchor = AnchorStyles.None;
         textBoxAuthToken.BackColor = SystemColors.WindowFrame;
-        tableLayoutPanel2.SetColumnSpan(textBoxAuthToken, 2);
+        tableLayoutPanel2.SetColumnSpan(textBoxAuthToken, 3);
         textBoxAuthToken.Enabled = false;
         textBoxAuthToken.ForeColor = SystemColors.MenuHighlight;
-        textBoxAuthToken.Location = new Point(196, 38);
+        textBoxAuthToken.Location = new Point(242, 38);
+        textBoxAuthToken.Margin = new Padding(3, 3, 25, 3);
         textBoxAuthToken.Name = "textBoxAuthToken";
-        textBoxAuthToken.Size = new Size(562, 23);
+        textBoxAuthToken.Size = new Size(689, 23);
         textBoxAuthToken.TabIndex = 0;
         textBoxAuthToken.TextChanged += textBoxAuthToken_TextChanged;
         // 
@@ -552,5 +535,4 @@ partial class ARRL
     private Button button_Select_File;
     private CheckBox checkBoxSelectOutFile;
     private OpenFileDialog fileDialogWrite;
-    private Button button_Submit_Auth;
 }
