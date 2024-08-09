@@ -4,6 +4,7 @@ public partial class ARRL : Form
 {
     private string? _URLEndpoint;
     private string? _AuthToken;
+    private string? _OutFile;
 
     public ARRL()
     {
@@ -44,5 +45,10 @@ public partial class ARRL : Form
     private void textBoxURL_TextChanged(object sender, EventArgs e)
     {
         _URLEndpoint = textBoxURL.Text;
+    }
+
+    private void textBoxOutFile_TextChanged(object sender, EventArgs e)
+    {
+        _OutFile = textBoxOutFile.Text;
     }
 }

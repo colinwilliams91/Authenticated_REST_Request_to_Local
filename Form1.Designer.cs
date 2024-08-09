@@ -130,6 +130,7 @@ partial class ARRL
         textBoxOutFile.Name = "textBoxOutFile";
         textBoxOutFile.Size = new Size(689, 23);
         textBoxOutFile.TabIndex = 0;
+        textBoxOutFile.TextChanged += textBoxOutFile_TextChanged;
         // 
         // label_Out_File
         // 
