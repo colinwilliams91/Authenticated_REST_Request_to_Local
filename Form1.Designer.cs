@@ -305,7 +305,7 @@ partial class ARRL
         button_Send_Req.TabIndex = 1;
         button_Send_Req.Text = "Send Request";
         button_Send_Req.UseVisualStyleBackColor = true;
-        button_Send_Req.Click += button_Send_Req_Click;
+        button_Send_Req.Click += Button_Send_Req_Click;
         // 
         // textBox2
         // 
