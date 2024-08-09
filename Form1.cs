@@ -9,6 +9,8 @@ public partial class ARRL : Form
     private string? _AuthToken;
     private string? _OutFile;
 
+    // TODO: Icon effects? IconEffect.Pulse;
+
     public ARRL()
     {
         InitializeComponent();
@@ -63,6 +65,7 @@ public partial class ARRL : Form
     private async void Button_Send_Req_Click(object sender, EventArgs e)
     {
         using HttpClient client = new();
+        // using NotifyIcon notifyIcon = new();
         // TODO: handle null OutFile, handle null URL
         if (_OutFile == null || _URLEndpoint == null)
         {
@@ -74,7 +77,15 @@ public partial class ARRL : Form
         }
         HttpResponseMessage response = await client.GetAsync(_URLEndpoint);
         string responseBody = await response.Content.ReadAsStringAsync();
-        await File.WriteAllTextAsync(_OutFile, responseBody, Encoding.UTF8);
+        try
+        {
+            await File.WriteAllTextAsync(_OutFile, responseBody, Encoding.UTF8);
+        }
+        catch (Exception)
+        {
+            throw new Exception();
+        }
+
     }
     #endregion
 }
