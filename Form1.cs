@@ -1,3 +1,6 @@
+using System.Net.Http.Headers;
+using System.Text;
+
 namespace Invoke_Auth_Rest_Write;
 
 public partial class ARRL : Form
@@ -50,5 +53,24 @@ public partial class ARRL : Form
     private void textBoxOutFile_TextChanged(object sender, EventArgs e)
     {
         _OutFile = textBoxOutFile.Text;
+    }
+
+    private async void button_Send_Req_Click(object sender, EventArgs e)
+    {
+        // TODO: handle null OutFile, handle null URL
+        if (_OutFile == null || _URLEndpoint == null)
+        {
+            return;
+        }
+        using (HttpClient client = new HttpClient())
+        {
+            if (!string.IsNullOrWhiteSpace(_AuthToken))
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _AuthToken);
+            }
+            HttpResponseMessage response = await client.GetAsync(_URLEndpoint);
+            string responseBody = await response.Content.ReadAsStringAsync();
+            await File.WriteAllTextAsync(_OutFile, responseBody, Encoding.UTF8);
+        }
     }
 }
