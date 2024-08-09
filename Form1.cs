@@ -2,6 +2,7 @@ namespace Invoke_Auth_Rest_Write;
 
 public partial class ARRL : Form
 {
+    private string? _URLEndpoint;
     private string? _AuthToken;
 
     public ARRL()
@@ -38,6 +39,10 @@ public partial class ARRL : Form
     private void textBoxAuthToken_TextChanged(object sender, EventArgs e)
     {
         _AuthToken = textBoxAuthToken.Text;
-        textBox6.Text = _AuthToken;
+    }
+
+    private void textBoxURL_TextChanged(object sender, EventArgs e)
+    {
+        _URLEndpoint = textBoxURL.Text;
     }
 }

@@ -34,7 +34,7 @@ partial class ARRL
         textBoxOutFile = new TextBox();
         label_Out_File = new Label();
         tableLayoutPanel7 = new TableLayoutPanel();
-        textBox6 = new TextBox();
+        textBoxURL = new TextBox();
         label_URL = new Label();
         ARRL_ASCII = new Label();
         tableLayoutPanel2 = new TableLayoutPanel();
@@ -150,7 +150,7 @@ partial class ARRL
         tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
         tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
         tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-        tableLayoutPanel7.Controls.Add(textBox6, 1, 1);
+        tableLayoutPanel7.Controls.Add(textBoxURL, 1, 1);
         tableLayoutPanel7.Controls.Add(label_URL, 0, 0);
         tableLayoutPanel7.Dock = DockStyle.Fill;
         tableLayoutPanel7.Location = new Point(3, 112);
@@ -161,18 +161,19 @@ partial class ARRL
         tableLayoutPanel7.Size = new Size(956, 66);
         tableLayoutPanel7.TabIndex = 5;
         // 
-        // textBox6
+        // textBoxURL
         // 
-        textBox6.Anchor = AnchorStyles.Right;
-        textBox6.BackColor = SystemColors.WindowFrame;
-        tableLayoutPanel7.SetColumnSpan(textBox6, 3);
-        textBox6.Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
-        textBox6.ForeColor = SystemColors.MenuHighlight;
-        textBox6.Location = new Point(242, 38);
-        textBox6.Margin = new Padding(3, 3, 25, 3);
-        textBox6.Name = "textBox6";
-        textBox6.Size = new Size(689, 23);
-        textBox6.TabIndex = 0;
+        textBoxURL.Anchor = AnchorStyles.Right;
+        textBoxURL.BackColor = SystemColors.WindowFrame;
+        tableLayoutPanel7.SetColumnSpan(textBoxURL, 3);
+        textBoxURL.Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        textBoxURL.ForeColor = SystemColors.MenuHighlight;
+        textBoxURL.Location = new Point(242, 38);
+        textBoxURL.Margin = new Padding(3, 3, 25, 3);
+        textBoxURL.Name = "textBoxURL";
+        textBoxURL.Size = new Size(689, 23);
+        textBoxURL.TabIndex = 0;
+        textBoxURL.TextChanged += textBoxURL_TextChanged;
         // 
         // label_URL
         // 
@@ -525,7 +526,7 @@ partial class ARRL
     private TableLayoutPanel tableLayoutPanel10;
     private TextBox textBoxOutFile;
     private TableLayoutPanel tableLayoutPanel7;
-    private TextBox textBox6;
+    private TextBox textBoxURL;
     private Label label_URL;
     private Label label_Token;
     private CheckBox checkBoxAuthToken;
